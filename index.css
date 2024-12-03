@@ -1,0 +1,202 @@
+/* General Container Styling */
+/* index.css or App.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap');
+
+.pricing-ui {
+    max-width: 450px; /* Restrict total width to 800px */
+    min-width: 450px; /* Enforce a minimum width */
+    width: 450px; /* Set exact width */
+    margin: 0 auto; /* Center the container */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    box-sizing: border-box; /* Includes padding and border in width */
+    padding: 0 10px; /* Optional padding for spacing */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 800px) {
+    .pricing-ui {
+        width: 100%; /* Use full width of the screen for smaller devices */
+        min-width: unset; /* Remove minimum width on small screens */
+        padding: 0 5px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Header with Lines */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure header spans the full width of the container */
+    box-sizing: border-box; /* Prevent overflow */
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #cdcaca;
+    margin: 0 10px; /* Spacing around lines */
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6699;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Pricing Card Styling */
+.pricing-card {
+    max-width: 100%; /* Ensure cards do not exceed container width */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Include padding and borders in width calculation */
+}
+
+.pricing-card.expanded {
+    border: 2px solid #ff6699;
+    background-color: #ffeef5;
+}
+
+/* Footer and Add-to-Cart Button */
+.footer {
+    margin: 1rem 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart {
+    background-color: #ff6699;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 450px; /* Prevent button from exceeding container width */
+    box-sizing: border-box;
+    min-width: 450px;
+}
+
+.add-to-cart:hover {
+    background-color: #ff3366;
+}
+
+/* Powered By */
+.powered-by {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 820px) {
+    .pricing-ui {
+        padding: 0 5px; /* Adjust padding for smaller screens */
+    }
+}
+.badge {
+    position: absolute;
+    top: -10px; /* Adjusts position above the card */
+    right: 10px; /* Positions it towards the top-right corner */
+    background-color: #ff6699; /* Background color */
+    color: #fff; /* Text color */
+    font-size: 0.8rem; /* Adjust font size */
+    padding: 0.2rem 0.5rem; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Make the text bold */
+    z-index: 1; /* Ensures it's above other elements */
+}
+.unit1{
+    display: flex;
+  
+    align-items: center;
+}
+.unit1-part1{
+
+    margin-left: 20px;
+}
+.unit1-part2{
+    margin-left: 30px;
+    
+}
+.unit1-part3{
+    margin-left: 80px;
+   
+    
+}
+.discount{
+    background-color: #FF6B82;
+    color: white;
+
+    width: 70px !important;
+    height: 25px;
+    gap: 0px;
+    border-radius: 1px 0px 0px 0px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.expanded{
+    height: 280px;
+}
+input[type="radio"]:checked {
+    accent-color: rgb(213, 92, 92); /* Change to red when selected */
+}
+input[type="radio"] {
+    width: 12px;
+    height: 12px;
+    transform: scale(1.5); /* Adjust scale to increase size */
+    accent-color: red; /* Add color */
+    cursor: pointer; /* Add pointer cursor for better UX */
+}
+.badge {
+
+    display: inline-block;
+    background-color: #FF6B82; /* Yellow background */
+    color: #000; /* Black text */
+    font-weight: 400;
+    font-size: 10px;
+    padding: 5px 15px; /* Adjust padding for proper spacing */
+    text-align: center;
+    line-height: 14px;
+    border-radius: 0 4px 4px 0; /* Rounded corner on one side */
+    z-index: 99999;
+    padding: 10px;
+    
+}
+
+.badge::before,
+.badge::after {
+    content: '';
+    position: absolute;
+    top: 22%;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #FF6B82; /* Flag color (points downward now) */
+    transform: translateY(-40%);
+    z-index: 999;
+}
+
+.badge::before {
+    left: -6px; /* Position flag on the left side */
+    z-index: 999;
+   
+}
+
+.badge::after {
+    right: -6px; /* Position flag on the right side */
+    z-index: 999;
+}
+
+
